@@ -11,16 +11,12 @@ export default function RootLayout({
     <ClerkProvider>
       <html lang="en" />
       <body>
-        <ClerkLoading>
-          <div className="font-bold flex items-center justify-center h-screen">
-            <div className="text-2xl">Loading...</div>
+        <div className="max-w-6xl mx-auto">
+          <div className="flex flex-col h-screen">
+            <Navbar />
+            {children}
           </div>
-        </ClerkLoading>
-        <ClerkLoaded>
-          <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col h-screen"><Navbar/>{children}</div>
-          </div>
-        </ClerkLoaded>
+        </div>
       </body>
     </ClerkProvider>
   );
