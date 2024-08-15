@@ -1,0 +1,18 @@
+'use client'
+import { useUser } from '@clerk/nextjs'
+import React from 'react'
+
+const clientPage = () => {
+    const { isLoaded, isSignedIn, user } = useUser()
+
+  if (!isLoaded || !isSignedIn) {
+    return null
+  }
+  return (
+    <div className='h-full flex flex-col items-center justify-center text-2xl'>
+      Hello, {user.firstName} {user.lastName}
+    </div>
+  )
+}
+
+export default clientPage
