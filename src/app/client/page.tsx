@@ -2,7 +2,7 @@
 import { useUser } from '@clerk/nextjs'
 import React from 'react'
 
-const clientPage = () => {
+const ClientPage = () => {
     const { isLoaded, isSignedIn, user } = useUser()
 
   if (!isLoaded || !isSignedIn) {
@@ -15,4 +15,4 @@ const clientPage = () => {
   )
 }
 
-export default clientPage
+export default ClientPage
